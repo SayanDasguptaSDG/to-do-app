@@ -5,7 +5,7 @@
 			  src="https://code.jquery.com/jquery-3.3.1.js"
 			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 			  crossorigin="anonymous"></script>
-
+    <script src="/assets/todo-list.js"></script>
         <link href="/assets/styles.css" rel="stylesheet" type="text/css"/>
     <title>Todo List</title>
   </head>
@@ -19,9 +19,10 @@
       </form>
 
       <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <% for(var i=0; i<todos.length; i++) { %>
+          <li><%= todos[i].item %></li>
+        <% } %>
+
       </ul>
 
     </div>
